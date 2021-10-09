@@ -18,8 +18,14 @@ python run.py --config config/vox-256.yaml --device_ids 0,1,2,3,4,5,6,7
 Demo:  
 --------
 ```
-python demo.py --config config/vox-256.yaml --checkpoint path/to/checkpoint --source_image path/to/source --driving_video path/to/driving --relative --adapt_scale --find_best_frame
+python demo.py --config config/vox-256.yaml --checkpoint path/to/checkpoint --source_image path/to/source --driving_video path/to/driving --relative --adapt_scale --find_best_frame --result_video path/to/result
 ```
+==> example 
+```
+python demo.py --config files/vox-256.yaml --checkpoint ./files/15kp-ep119.pth.zip --source_image ./files/source.jpg --driving_video ./files/1.mp4 --relative --adapt_scale --find_best_frame --result_video ./files/result.mp4
+```
+
+
 free-view (e.g. yaw=20, pitch=roll=0):
 ```
 python demo.py --config config/vox-256.yaml --checkpoint path/to/checkpoint --source_image path/to/source --driving_video path/to/driving --relative --adapt_scale --find_best_frame --free_view --yaw 20 --pitch 0 --row 0
